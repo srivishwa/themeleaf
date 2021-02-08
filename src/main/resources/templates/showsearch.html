@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Success</title>
+<style type="text/css">
+    span {
+        display: inline-block;
+        width: 200px;
+        text-align: left;
+    }
+</style>
+</head>
+<body>
+
+<div align="center" th:if="${presentornot == true}">
+    <h2>Searched Result</h2>
+    <span>Employee ID</span><span th:text="${id.employeeId}"></span><br/>
+    <span>Forenmae</span><span th:text="${id.forename}"></span><br/>
+    <span>Surname</span><span th:text="${id.surname}"></span><br/>
+    <span>Age</span><span th:text="${id.age}"></span><br/>
+    <span>Company</span><span th:text="${id.company}"></span><br/>
+    <span>Postcode</span><span th:text="${id.postcode}"></span><br/>	
+	<a href="/upload"><button>Search again</button></a>
+</div>
+
+<div align="center" th:if="${presentornot == false}">
+    <h2>User not found</h2>
+</div>
+</body>
+</html>

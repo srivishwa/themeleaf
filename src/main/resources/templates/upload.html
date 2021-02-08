@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Add Employee Details:</h1>
+	<form action="#" th:action="@{/uploademployee}" th:object="${employee}" method="post">
+		<label>EmployeeId:</label>
+		<input type="text" th:field="*{employeeId}" placeholder="Enter Id"><br>
+		<label>Forename</label>
+		<input type="text" th:field="*{forename}" placeholder="Enter forename"><br>
+		<label>Surname</label>
+		<input type="text" th:field="*{surname}" placeholder="Enter surname"><br>
+		<label>Age</label>
+		<input type="text" th:field="*{age}" placeholder="Enter age"><br>
+		<label>Company</label>
+		<input type="text" th:field="*{company}" placeholder="Enter company"><br>
+		<label>postcode</label>
+		<input type="text" th:field="*{postcode}" placeholder="Enter postcode"><br>
+		<button type="submit">Add data</button>
+	</form>
+	
+<h1>Search By Id</h1>
+	<form action="#" th:action="@{/getbyid}" method= "get">
+		<label>EmployeeId:</label>
+		<input type="text" th:name="id" name ="id" placeholder="Enter Id"><br>
+		<button type="submit">Get ID details</button>
+	</form>
+</body>
+</html>
